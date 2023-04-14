@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainBody {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#sidePanel {
+    background-color: aqua;
+    min-width: 100px;
+    display: flex;
+    flex: auto;
+}
+
+#mainPanel {
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    flex: auto;
+    
+}
