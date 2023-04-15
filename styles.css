@@ -5,27 +5,77 @@ body {
 }
 
 #mainBody {
-    background-color: antiquewhite;
+    background-color: yellow;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
     margin-bottom: 100px;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    
 }
 
 #sidePanel {
-    background-color: aqua;
-    min-width: 100px;
+    background-color: purple;
     display: flex;
-    flex: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    border-width: 2px;
+    border-color: blue;
+    border-style: solid;
+    min-height: 100%;
+    min-width: auto;
+}
+
+.fillContent {
+    flex: 1;
+    background-color: orange;
+    min-height: 100px;
+}
+
+button {
+    flex: 1;
 }
 
 #mainPanel {
-    background-color: azure;
+    background-color: red;
     display: flex;
     flex-direction: column;
-    width: 500px;
-    height: 500px;
-    flex: auto;
-    
+}
+
+#texPanel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.title {
+    text-align: center;
+}
+
+.about {
+    text-align: center;
+}
+#gamePanel {
+    min-width: 640px;
+    min-height: 640px;
+    background-color: aliceblue;
+    border-left: 2px black;
+    border-top: 2px black;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-style: solid;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gameDiv {
+    background-color: deeppink;
+    min-width: 25%;
+    min-height: 25%;
 }
