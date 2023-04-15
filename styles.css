@@ -68,15 +68,15 @@ button {
     text-align: center;
 }
 #gamePanel {
-    min-width: 480px;
-    min-height: 480px;
+    min-width: 500px;
+    min-height: 500px;
     background-color: aliceblue;
     border: 2px black;
     border-style: solid;
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
-    flex: auto;
+    flex: 1;
     margin: 30px;
     box-shadow: 3px whitesmoke;
     
@@ -84,4 +84,5 @@ button {
 
 .gameDiv {
     background-color: antiquewhite;
+    flex: 1;
 }

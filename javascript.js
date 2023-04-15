@@ -3,6 +3,7 @@ const btnGame64 = document.querySelector('.size64');
 const btnGame256 = document.querySelector('.size256');
 const btnGame576 = document.querySelector('.size576');
 const btnReset = document.querySelector('.reset');
+const btnRandomSize = document.querySelector('.random');
 
 btnGame64.addEventListener('click', () => {
     createGameGrid(64);
@@ -14,6 +15,13 @@ btnGame256.addEventListener('click', () => {
 
 btnGame576.addEventListener('click', () => {
     createGameGrid(576);
+});
+
+btnRandomSize.addEventListener('click', () => {
+    let n = prompt ("Please enter a number between 4 and 100");
+    if (typeof Number(n) === "number") {
+        createGameGrid(n);
+    } else { alert("Thats not a number between 4 and 100")}
 });
 
 btnReset.addEventListener('click', () => {
