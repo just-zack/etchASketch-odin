@@ -18,25 +18,31 @@ btnGame576.addEventListener('click', () => {
 });
 
 btnRandomSize.addEventListener('click', () => {
-    let n = prompt ("Please enter a number between 4 and 100");
-    if (typeof Number(n) === "number") {
-        createGameGrid(n);
-    } else { alert("Thats not a number between 4 and 100")}
+    randomSize ();
 });
 
 btnReset.addEventListener('click', () => {
     resetGameGridColor();
 });
 
+function randomSize () {
+    let n = (prompt ("Please enter a number between 1 and 1000"));
+    n = parseInt(n);
+    if (typeof n === "number") {
+        createGameGrid(n);
+    } else { alert("Thats not a number between 1 and 100")};
+}
 function createGameGrid (n) {
     clearGameGrid();
-    for (let i =0; i < n; i++) {
-        const gameDiv = document.createElement('div');
-        gameDiv.classList.add('gameDiv');
-        gamePanel.appendChild(gameDiv);
-        gameDiv.style.minWidth = (100/Math.sqrt(n)) +"%";
-        gameDiv.style.minHeight = (100/Math.sqrt(n)) +"%";
-        convertColor();
+    if (n > 0 && n < 2000) {
+        for (let i =0; i < n; i++) {
+            const gameDiv = document.createElement('div');
+            gameDiv.classList.add('gameDiv');
+            gamePanel.appendChild(gameDiv);
+            gameDiv.style.minWidth = (100/Math.sqrt(n)) +"%";
+            gameDiv.style.minHeight = (100/Math.sqrt(n)) +"%";
+            convertColor();
+        }
     }
 };
 
