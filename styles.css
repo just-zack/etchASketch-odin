@@ -2,10 +2,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: helvetica, sans-serif;
 }
 
 #mainBody {
-    background-color: yellow;
+    background-color: antiquewhite;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -18,32 +19,24 @@ body {
 }
 
 #sidePanel {
-    background-color: purple;
+    background-color: antiquewhite;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex: auto;
-    border-width: 2px;
-    border-color: blue;
-    border-style: solid;
     min-height: 100%;
     min-width: 100px;
-}
-
-.fillContent {
-    flex: 1;
-    background-color: orange;
-    min-width: 100%;
-    height: auto;
+    margin-left: 30px;
 }
 
 button {
-    background-color: gainsboro;
+    background-color: antiquewhite;
     border: 2px black solid;
-    color: grey;
-    width: 150px;
-    height: 75px;
+    border-radius: 10px;
+    color: black;
+    width: 125px;
+    height: 55px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -52,8 +45,9 @@ button {
 }
 
 #mainPanel {
-    background-color: red;
+    background-color: antiquewhite;
     display: flex;
+    flex: auto;
     flex-direction: column;
 }
 
@@ -66,24 +60,28 @@ button {
 
 .title {
     text-align: center;
+    font-size: 40pt;
+    font-weight: 700;
 }
 
 .about {
     text-align: center;
 }
 #gamePanel {
-    min-width: 500px;
-    min-height: 500px;
+    min-width: 480px;
+    min-height: 480px;
     background-color: aliceblue;
     border: 2px black;
     border-style: solid;
+    border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
-    margin: 20px;
+    flex: auto;
+    margin: 30px;
     box-shadow: 3px whitesmoke;
     
 }
 
 .gameDiv {
-    background-color: deeppink;
+    background-color: antiquewhite;
 }

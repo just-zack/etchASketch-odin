@@ -39,7 +39,7 @@ function clearGameGrid () {
 function resetGameGridColor () {
     const gameDiv = document.querySelectorAll('.gameDiv');
     gameDiv.forEach((div) => {
-            div.style.backgroundColor = "deeppink";
+            div.style.backgroundColor = "antiquewhite";
         })
 }
 
