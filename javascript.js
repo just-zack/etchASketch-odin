@@ -4,6 +4,8 @@ const btnGame256 = document.querySelector('.size256');
 const btnGame576 = document.querySelector('.size576');
 const btnReset = document.querySelector('.reset');
 const btnRandomSize = document.querySelector('.random');
+const btnColor = document.querySelector(".rainbow")
+let color = "black"
 
 btnGame64.addEventListener('click', () => {
     createGameGrid(64);
@@ -25,6 +27,10 @@ btnReset.addEventListener('click', () => {
     resetGameGridColor();
 });
 
+btnColor.addEventListener('click', () => {
+    convertColor(randomColor());
+})
+
 function randomSize () {
     let n = (prompt ("Please enter a number between 1 and 1000"));
     n = parseInt(n);
@@ -41,7 +47,7 @@ function createGameGrid (n) {
             gamePanel.appendChild(gameDiv);
             gameDiv.style.minWidth = (100/Math.sqrt(n)) +"%";
             gameDiv.style.minHeight = (100/Math.sqrt(n)) +"%";
-            convertColor();
+            convertColor(color);
         }
     }
 };
@@ -57,14 +63,20 @@ function resetGameGridColor () {
         })
 }
 
-function convertColor () {
+function convertColor (color) {
     const gameDiv = document.querySelectorAll('.gameDiv');
     gameDiv.forEach((div) => {
         div.addEventListener('mouseover', () => {
-            div.style.backgroundColor = "black";
+            div.style.backgroundColor = color;
         })
     });
 }
 
+function randomColor () {
+    let randomColor = Math.floor(Math.random()*16777215).toString(16);
+    color = "#" + randomColor;
+    convertColor (color);
+}
+
 createGameGrid (64);
-convertColor()
+convertColor(color)
