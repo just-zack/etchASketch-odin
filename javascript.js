@@ -1,8 +1,7 @@
 const gamePanel = document.querySelector('#gamePanel');
 
-
 function createGameGrid (n) {
-    const gamePanel = document.querySelector('#gamePanel');
+    clearGameGrid;
     for (let i =0; i < n; i++) {
         const gameDiv = document.createElement('div');
         gameDiv.classList.add('gameDiv');
@@ -11,4 +10,10 @@ function createGameGrid (n) {
         gameDiv.style.minHeight = (100/Math.sqrt(n)) +"%"
     }
 };
-createGameGrid(64);
+
+function clearGameGrid () {
+    gamePanel.innerHTML = ""
+;}
+
+createGameGrid(16);
+
