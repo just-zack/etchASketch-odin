@@ -32,11 +32,12 @@ btnColor.addEventListener('click', () => {
 })
 
 function randomSize () {
-    let n = (prompt ("Please enter a number between 1 and 1000"));
+    let n = (prompt ("Please enter a number between 1 and 30"));
     n = parseInt(n);
-    if (typeof n === "number") {
+    if (n >= 1 && n <= 30) {
+        n = n * n;
         createGameGrid(n);
-    } else { alert("Thats not a number between 1 and 100")};
+    } else {alert("Thats not a number between 1 and 30")};
 }
 function createGameGrid (n) {
     clearGameGrid();
@@ -58,9 +59,10 @@ function clearGameGrid () {
 
 function resetGameGridColor () {
     const gameDiv = document.querySelectorAll('.gameDiv');
+    convertColor("black");
     gameDiv.forEach((div) => {
             div.style.backgroundColor = "antiquewhite";
-        })
+        });
 }
 
 function convertColor (color) {
