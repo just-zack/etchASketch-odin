@@ -29,7 +29,6 @@ btnReset.addEventListener('click', () => {
 
 btnColor.addEventListener('click', () => {
     convertRandomColor();
-    btnColor= "black"
 })
 
 function randomSize () {
