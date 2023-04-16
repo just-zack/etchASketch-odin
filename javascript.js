@@ -48,8 +48,8 @@ function createGameGrid (n) {
             gamePanel.appendChild(gameDiv);
             gameDiv.style.minWidth = (100/Math.sqrt(n)) +"%";
             gameDiv.style.minHeight = (100/Math.sqrt(n)) +"%";
-            convertColor(color);
         }
+        convertColor("black");
     }
 };
 
